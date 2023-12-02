@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  redis:
+    host: 1.94.28.8
+    port: 6379
+    password: 16379
+    username: root
+
+
+
+email:
+  username: "2759148152@qq.com"
+  password: "889911lxc"
+  port: "587"
+  subject: "这是一条验证码"
+  host: "smtp.example.com"
+  htmlContent: ${htmlContent}
