@@ -2,9 +2,11 @@ server:
   port: 8080
 
 spring:
+  config:
+    import: classpath:you-cant-see-that.yml
   mail:
-    username: ${NAME:2759148152@qq.com}
-    password: ${PASSWORD:qvwwxygcicondhcf}
+    username: ${NAME:ENC(5a1d+OXflB/vnE9QMV2svg==)}
+    password: ${PASSWORD:ENC(X7WaLBe3XtDJOfyykBfxcg==)}
     port: ${PORT:587}
     host: ${HOST:smtp.qq.com}
 captcha:
