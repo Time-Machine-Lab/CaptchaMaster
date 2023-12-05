@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+spring:
+  mail:
+    username: ${NAME:2759148152@qq.com}
+    password: ${PASSWORD:qvwwxygcicondhcf}
+    port: ${PORT:587}
+    host: ${HOST:smtp.qq.com}
+captcha:
+  mail:
+    code-length: ${CODE_LENGTH:5}
+  image-code:
+    width: ${WIDTH:165}
+    height: ${HEIGHT:45}
+    dot-size: ${DOT_SIZE:30}
+
