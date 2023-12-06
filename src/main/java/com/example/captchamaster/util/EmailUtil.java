@@ -36,9 +36,8 @@ public class EmailUtil {
             htmlContent = htmlContent.replace("CODE", code);
             helper.setText(htmlContent, true);
             mailSender.send(message);
-            System.out.println("邮件发送成功！");
         } catch (MessagingException e) {
-            System.out.println("邮件发送失败：" + e.getMessage());
+            throw new RuntimeException(e);
         }
     }
 }
