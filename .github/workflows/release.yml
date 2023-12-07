@@ -3,7 +3,7 @@ name: Genius 多模块项目部署 [CI|CD]流
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
