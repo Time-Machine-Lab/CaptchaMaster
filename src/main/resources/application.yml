@@ -1,17 +1,6 @@
 server:
-  port: 8080
+  port: ${SERVER_PORT:8080}
 
 spring:
-  mail:
-    username: ${NAME:ENC(5a1d+OXflB/vnE9QMV2svg==)}
-    password: ${PASSWORD:ENC(X7WaLBe3XtDJOfyykBfxcg==)}
-    port: ${PORT:587}
-    host: ${HOST:smtp.qq.com}
-captcha:
-  mail:
-    code-length: ${CODE_LENGTH:5}
-  image-code:
-    width: ${WIDTH:165}
-    height: ${HEIGHT:45}
-    dot-size: ${DOT_SIZE:30}
-
+  profiles:
+    active: ${ACTIVE:dev}
