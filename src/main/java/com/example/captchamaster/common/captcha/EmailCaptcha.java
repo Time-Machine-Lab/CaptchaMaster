@@ -23,10 +23,8 @@ public class EmailCaptcha extends CommonCaptchaHandler<Map<String, String>, Stri
 
     @Override
     public Map<String, String> CaptchaCode(String email) {
-        Map<String, String> map = new HashMap<>();
-        map.put(email, this.code);
         emailUtil.sendCode(email, this.code);
-        return map;
+        return Map.of("email", email, "code", code);
     }
 
 }

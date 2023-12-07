@@ -22,8 +22,6 @@ public class ImageCaptcha extends CommonCaptchaHandler<Map<String, String>, Stri
 
     @Override
     public Map<String, String> CaptchaCode(String msg) {
-        Map<String, String> map = new HashMap<>();
-        map.put(imageUtil.CodeToBase64(this.code), this.code);
-        return map;
+        return Map.of("base64",imageUtil.CodeToBase64(this.code), "code",code);
     }
 }
