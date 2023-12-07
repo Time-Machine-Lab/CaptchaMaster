@@ -100,33 +100,31 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <source>11</source>
-                    <target>11</target>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
-            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>com.example.captchamaster.CaptchaMasterApplication</mainClass>
-                    <skip>true</skip>
+                    <executable>true</executable>
+                    <layout>JAR</layout>
                 </configuration>
                 <executions>
                     <execution>
-                        <id>repackage</id>
                         <goals>
                             <goal>repackage</goal>
                         </goals>
+                        <configuration>
+                            <attach>false</attach>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
         </plugins>
+
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
     </build>
 
 </project>
