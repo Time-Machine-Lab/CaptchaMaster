@@ -18,13 +18,13 @@ public class EmailCaptcha extends CommonCaptchaHandler<Map<String, String>, Stri
     }
 
     public EmailCaptcha(int codeLength) {
-        this.code = CodeUtil.code(codeLength);
+        this.codeLength = codeLength;
     }
 
     @Override
     public Map<String, String> CaptchaCode(String email) {
-        emailUtil.sendCode(email, this.code);
+        String code = CodeUtil.code(this.codeLength);
+        emailUtil.sendCode(email, code);
         return Map.of("email", email, "code", code);
     }
-
 }

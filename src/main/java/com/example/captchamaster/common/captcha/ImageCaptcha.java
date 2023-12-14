@@ -4,24 +4,23 @@ import com.example.captchamaster.util.CodeUtil;
 import com.example.captchamaster.util.ImageUtil;
 
 import javax.annotation.Resource;
-import java.awt.*;
-import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 
 public class ImageCaptcha extends CommonCaptchaHandler<Map<String, String>, String>{
     @Resource
     ImageUtil imageUtil;
+
     public ImageCaptcha() {
-        this.code = CodeUtil.code();
+        this.codeLength = 5;
     }
 
-    public ImageCaptcha(int n){
-        this.code = CodeUtil.code(n);
+    public ImageCaptcha(int codeLength){
+        this.codeLength = codeLength;
     }
 
     @Override
     public Map<String, String> CaptchaCode(String msg) {
-        return Map.of("base64",imageUtil.CodeToBase64(this.code), "code",code);
+        String code = CodeUtil.code(this.codeLength);
+        return Map.of("base64",imageUtil.CodeToBase64(code), "code",code);
     }
 }
