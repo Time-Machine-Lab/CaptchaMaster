@@ -32,8 +32,7 @@ public class EmailUtil {
             // 邮件主题
             String subject = "这是一条验证码";
             helper.setSubject(subject);
-            htmlContent = htmlContent.replace("CODE", code);
-            helper.setText(htmlContent, true);
+            helper.setText(htmlContent.replace("CODE", code), true);
             mailSender.send(message);
         } catch (MessagingException e) {
             throw new RuntimeException(e);

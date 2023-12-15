@@ -30,3 +30,5 @@ ENV JASYPT_PASSWORD = ${JASYPT_PASSWORD}
 EXPOSE ${SERVER_PORT}
 
 ENTRYPOINT ["java","-jar","/rvc-captcha.jar"]
+
+#<Auto> -e:test -type:single -m:rvc-captcha -v:1.0.2 -rp:8080 -de:<-e ACTIVE=test -e SERVER_PORT=8080>
