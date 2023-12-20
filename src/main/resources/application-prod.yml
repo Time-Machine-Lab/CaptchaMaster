@@ -14,9 +14,9 @@ spring:
       config:
         file-extension: yaml
       discovery:
-        namespace: 98732302-bf12-40a5-8d93-7f2d97187a12
+        namespace: 9623bd6c-3483-4f9e-a40d-1d54e190eb9b
         cluster-name: BJ
-        ip: ${SERVER_ADDR:ENC(Y5HcvI+7TfzJVRmAMpYDqR0bwJqzwMzdpQ8RCIr1y2w=)}
+        ip: ${SERVER_ADDR:ENC(yVsRSHZRO9O+QrHzTL/fTZCkqkhB0PxjVlHuUCRWm48=)}
 captcha:
   mail:
     code-length: ${CODE_LENGTH:5}
