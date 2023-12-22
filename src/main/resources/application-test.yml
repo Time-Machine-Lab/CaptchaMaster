@@ -1,0 +1,32 @@
+spring:
+  mail:
+    username: ${MAIL_NAME:ENC(+MA4K0WypJbTcWNUdMf/VX6tEa8Gjwp2r3oMlunxEoLW+iSmZg/sbQ==)}
+    password: ${MAIL_PASSWORD:ENC(dNESwPgHyBD+NCKxhPR0xb1s0qSJGZaMKtfZujYAN0Wnu9YEhEW5SQ==)}
+    port: ${PORT:587}
+    host: ${HOST:smtp.qq.com}
+  application:
+    name: tml-captcha-service
+  cloud:
+    nacos:
+      server-addr: ENC(VdzZDIUI6EP3mXnpOmb0l46RpSA5HlJgqy9/ZxU0Mx3U777m+o9J6Q==)
+      username: ENC(qqqHXA1bwhhYPJ9SXXZqyO5j//wygYDK)
+      password: ENC(v1J0g/bB0xWCi9Te8mwH1o309G9xtm6q1L8SeCkYdYY=)
+      config:
+        file-extension: yaml
+      discovery:
+        namespace: 98732302-bf12-40a5-8d93-7f2d97187a12
+        cluster-name: BJ
+        ip: ${SERVER_ADDR:ENC(Y5HcvI+7TfzJVRmAMpYDqR0bwJqzwMzdpQ8RCIr1y2w=)}
+captcha:
+  mail:
+    code-length: ${CODE_LENGTH:5}
+  image-code:
+    width: ${WIDTH:165}
+    height: ${HEIGHT:45}
+    dot-size: ${DOT_SIZE:30}
+
+
+jasypt:
+  encryptor:
+    algorithm: PBEWithMD5AndDES
+    password: ${JASYPT_PASSWORD:}
